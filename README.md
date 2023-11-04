@@ -1,8 +1,8 @@
 <h1>
-<img src="../api_food_explorer/tmp/uploadsPlates/logo.png">
+<img src="/tmp/uploadsPlates/logo.png">
 API Food Explorer</h1>
 
-<img src="../api_food_explorer/tmp/uploadsPlates/background-macarons.png">
+<img src="/tmp/uploadsPlates/background-macarons.png">
 
 <br>
 <br>
