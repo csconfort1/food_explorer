@@ -19,7 +19,7 @@ Este projeto é divido em duas partes:
 Acesse a pasta do projeto no terminal
 
 $ cd + sua pasta 
-https://github.com/csonfort1/api_food_explorer.git
+https://github.com/csonfort1/food_explorer.git
 
 <h2>Instalando as dependências:</h2>
 $ npm install
