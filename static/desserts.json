@@ -1,0 +1,33 @@
+[
+    {
+        "id":"98876508", 
+        "name":"Peachy Pastrie",
+        "description":"Delicioso folheado de pêssego com folhas de hortelã.",
+        "price":"32.97",
+        "image":"/static/images/Peachy-pastrie2.png"
+    },
+
+    {
+        "id":"98876509", 
+        "name":"Macarons",
+        "description":"Farinha de amêndoas, manteiga, claras e açúcar.",
+        "price":"79.97",
+        "image":"/static/images/Macarons2.png"
+    },
+
+    {
+        "id":"98876510", 
+        "name":"Bolo de Damasco",
+        "description":"Damasco fresco em uma massa sem glúten.",
+        "price":"19.97",
+        "image":"/static/images/Bolo-de-damasco2.png"
+    },
+
+    {
+        "id":"98876511", 
+        "name":"Prugna Pie",
+        "description":"Torta de ameixa com massa amanteigada, polvilho em açúcar.",
+        "price":"49.97",
+        "image":"/static/images/Prugna-pie2.png"
+    }
+]   
