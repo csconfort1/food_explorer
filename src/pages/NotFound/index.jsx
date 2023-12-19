@@ -1,4 +1,4 @@
-import {FiHome} from 'react-icons/fi';
+import {IoHomeOutline} from "react-icons/io5";
 import {useNavigate} from 'react-router-dom';
 
 import {Button} from '../../components/Button';
@@ -21,7 +21,7 @@ export function NotFound() {
         <p>Desculpe, a página que você buscou está indisponível.</p>
         <Button
           title="Voltar para Página Inicial"
-          icon={FiHome}
+          icon={IoHomeOutline}
           onClick={handleBack}
         />
       </main>
