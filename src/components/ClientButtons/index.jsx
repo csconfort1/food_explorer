@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TfiReceipt } from 'react-icons/tfi';
+/*import { TfiReceipt } from 'react-icons/tfi';*/
 
 import { useCart } from '../../hooks/cart';
 import { Button } from '../Button';
@@ -49,7 +49,7 @@ export function ClientButtons({
       </div>
       {withIcon ? (
         <Button
-          icon={TfiReceipt}
+          /*icon={TfiReceipt}*/
           title="incluir"
           onClick={() => {
             handleAddMeal({ meal_id, title, price, image, amount });

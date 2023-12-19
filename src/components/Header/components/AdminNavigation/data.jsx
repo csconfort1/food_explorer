@@ -1,25 +1,25 @@
-import { FiLogOut, FiPlus, FiUser } from 'react-icons/fi';
-import { TfiReceipt } from 'react-icons/tfi';
+/*import { FiLogOut, FiPlus, FiUser } from 'react-icons/fi';*/
+/*import { TfiReceipt } from 'react-icons/tfi';*/
 
 export const adminLinks = [
   {
     name: 'Adicionar',
-    icon: <FiPlus />,
+    /*icon: <FiPlus />,*/
     url: '/new',
   },
   {
     name: 'Pedidos',
-    icon: <TfiReceipt />,
+    /*icon: <TfiReceipt />,*/
     url: '/all-orders',
   },
   {
     name: 'Perfil',
-    icon: <FiUser />,
+    /*icon: <FiUser />,*/
     url: '/profile',
   },
   {
     name: 'Entrar/Sair',
-    icon: <FiLogOut />,
+    /*icon: <FiLogOut />,*/
     url: '/login',
   },
 ];

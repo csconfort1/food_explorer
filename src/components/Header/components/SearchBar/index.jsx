@@ -1,4 +1,4 @@
-import { FiSearch } from 'react-icons/fi';
+/*import { FiSearch } from 'react-icons/fi';*/
 
 import { Container, Input, ButtonSearch } from './styles';
 import { useSearchBar } from './useSearchBar';
@@ -15,7 +15,7 @@ export function SearchBar() {
       />
 
       <ButtonSearch>
-        <FiSearch />
+        Busca
       </ButtonSearch>
     </Container>
   );

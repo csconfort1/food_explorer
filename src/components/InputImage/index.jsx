@@ -1,4 +1,4 @@
-import { FiUpload } from 'react-icons/fi';
+/*import { FiUpload } from 'react-icons/fi';*/
 
 import { Container } from './styles';
 
@@ -7,7 +7,7 @@ export function InputImage({ isAMeal, onChange, ...rest }) {
     <Container>
       <p>Imagem do {isAMeal ? 'prato' : 'ingrediente'}</p>
       <label>
-        <FiUpload />
+        Upload
         <p>Selecione imagem</p>
         <input
           type="file"

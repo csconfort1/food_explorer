@@ -1,10 +1,4 @@
-import {
-    Container,
-    IconMenu,
-    LinkName,
-    ListItem,
-    NavigationLink,
-  } from '../navigationStyles';
+import {Container, IconMenu, LinkName, ListItem, NavigationLink,} from '../navigationStyles';
   import { clientLinks } from './data';
   import { useClientNavigation } from './useClientNavigation';
   

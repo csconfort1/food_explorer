@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaHeart } from 'react-icons/fa';
-import { FiHeart } from 'react-icons/fi';
+/*import { FaHeart } from 'react-icons/fa';*/
+/*import { FiHeart } from 'react-icons/fi';*/
 import { useNavigate } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/auth';
@@ -43,7 +43,7 @@ export function Card({ meal_id, title, description, price, image, isFav }) {
           type="button"
           onClick={handleAddToFavorite}
         >
-          {favoriteMeal ? <FaHeart /> : <FiHeart />}
+          {favoriteMeal ? /*<FaHeart />*/ coração1 :  coração2 /*<FiHeart />*/}
         </button>
       );
     }

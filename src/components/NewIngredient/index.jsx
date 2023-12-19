@@ -1,4 +1,4 @@
-import { FiPlus, FiX } from 'react-icons/fi';
+/*import { FiPlus, FiX } from 'react-icons/fi';*/
 
 import { Container } from './styles';
 
@@ -18,7 +18,7 @@ export function NewIngredient({ onClick, onChange, isNew, value, ...rest }) {
             type="button"
             onClick={onClick}
           >
-            <FiPlus />
+            +
           </button>
         </>
       ) : (
@@ -28,7 +28,7 @@ export function NewIngredient({ onClick, onChange, isNew, value, ...rest }) {
             type="button"
             onClick={onClick}
           >
-            <FiX />
+            X
           </button>
         </>
       )}

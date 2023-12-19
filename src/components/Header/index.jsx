@@ -1,4 +1,4 @@
-import {FiMenu, FiX} from 'react-icons/fi';
+/*import {FiMenu, FiX} from 'react-icons/fi';*/
 
 import foodExplorerLogo from '../../static/images/logo.png';
 import {Wrapper} from '../Wrapper/index.jsx';
@@ -23,13 +23,13 @@ export function Header() {
           <ButtonMenu title="Abrir ou fechar o menu" onClick={handleMenu}>
             {isMenuOpen && (
               <MenuIcon>
-                <FiX/>
+                X
               </MenuIcon>
             )}
 
             {!isMenuOpen && (
               <MenuIcon>
-                <FiMenu/>
+                Menu
               </MenuIcon>
             )}
           </ButtonMenu>
