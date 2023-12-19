@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import {FiCreditCard} from 'react-icons/fi';
-import {TfiReceipt} from 'react-icons/tfi';
+import {FaRegCreditCard} from "react-icons/fa";
+import {IoReceiptOutline} from "react-icons/io5";
 import {useNavigate} from 'react-router-dom';
 
 import pixImg from '../../static/images/pix.svg';
@@ -192,7 +192,7 @@ export function ShoppingCart() {
                       className={cardPayment ? 'selected-payment' : ''}
                       onClick={() => handlePaymentOption(true)}
                     >
-                      <FiCreditCard />
+                      <FaRegCreditCard/>
                       Crédito
                     </button>
                   </div>
@@ -232,7 +232,7 @@ export function ShoppingCart() {
                     </form>
                     <Button
                       title="Finalizar Pagamento"
-                      icon={TfiReceipt}
+                      icon={IoReceiptOutline}
                       onClick={handleFinalizePurchase}
                     />
                   </div>

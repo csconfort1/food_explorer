@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IoIosArrowBack } from 'react-icons/io';
+import {FaRegArrowAltCircleLeft} from "react-icons/fa";
 
 import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
@@ -73,7 +73,7 @@ export function Profile() {
         <Form>
           <ButtonText
             title="voltar"
-            icon={IoIosArrowBack}
+            icon={FaRegArrowAltCircleLeft}
             to="/"
           />
           <h1>Meu perfil</h1>

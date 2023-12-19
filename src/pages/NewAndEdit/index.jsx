@@ -1,5 +1,5 @@
-import { FiX } from 'react-icons/fi';
-import { IoIosArrowBack } from 'react-icons/io';
+import {SlClose} from "react-icons/sl";
+import {FaRegArrowAltCircleLeft} from "react-icons/fa";
 
 import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
@@ -100,7 +100,7 @@ export function NewAndEdit() {
         <Form>
           <ButtonText
             title="voltar"
-            icon={IoIosArrowBack}
+            icon={FaRegArrowAltCircleLeft}
             to="/"
           />
           {!editInterface && <h1>Adicionar Prato</h1>}
@@ -184,7 +184,7 @@ export function NewAndEdit() {
             type="button"
             onClick={handleModal}
           >
-            <FiX />
+            <SlClose/>
           </button>
           <h2>Ingrediente Novo!</h2>
           <p>
