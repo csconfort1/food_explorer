@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {FaRegArrowAltCircleLeft} from "react-icons/fa";
+import {FiArrowLeft} from "react-icons/fi";
 import {useNavigate, useParams} from 'react-router-dom';
 
 import {AdmButtons} from '../../components/AdmButtons';
@@ -95,7 +95,7 @@ export function Details() {
       <Wrapper>
         {mealInfos ? (
           <Content>
-            <ButtonText title="voltar" icon={FaRegArrowAltCircleLeft} to="/"/>
+            <ButtonText title="voltar" icon={FiArrowLeft} to="/"/>
             <img src={mealImage} alt={`Foto do item ${mealInfos.title}`}/>
             <h1>{mealInfos.title}</h1>
             <p>{mealInfos.description}</p>
