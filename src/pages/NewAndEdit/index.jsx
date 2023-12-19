@@ -1,5 +1,5 @@
 import {SlClose} from "react-icons/sl";
-import {FaRegArrowAltCircleLeft} from "react-icons/fa";
+/*import {FaRegArrowAltCircleLeft} from "react-icons/fa";*/
 
 import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
@@ -100,7 +100,7 @@ export function NewAndEdit() {
         <Form>
           <ButtonText
             title="voltar"
-            icon={FaRegArrowAltCircleLeft}
+            /*icon={FaRegArrowAltCircleLeft}*/
             to="/"
           />
           {!editInterface && <h1>Adicionar Prato</h1>}
