@@ -1,4 +1,4 @@
-import {SlClose} from "react-icons/sl";
+/*import {SlClose} from "react-icons/sl";*/
 /*import {FaRegArrowAltCircleLeft} from "react-icons/fa";*/
 
 import { Button } from '../../components/Button';
@@ -184,7 +184,6 @@ export function NewAndEdit() {
             type="button"
             onClick={handleModal}
           >
-            <SlClose/>
           </button>
           <h2>Ingrediente Novo!</h2>
           <p>
