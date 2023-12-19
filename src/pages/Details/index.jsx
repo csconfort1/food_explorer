@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {FiArrowLeft} from "react-icons/fi";
+/*import {FiArrowLeft} from "react-icons/fi";*/
 import {useNavigate, useParams} from 'react-router-dom';
 
 import {AdmButtons} from '../../components/AdmButtons';
@@ -95,7 +95,7 @@ export function Details() {
       <Wrapper>
         {mealInfos ? (
           <Content>
-            <ButtonText title="voltar" icon={FiArrowLeft} to="/"/>
+            <ButtonText title="voltar" /*icon={FiArrowLeft}*/ to="/"></ButtonText>
             <img src={mealImage} alt={`Foto do item ${mealInfos.title}`}/>
             <h1>{mealInfos.title}</h1>
             <p>{mealInfos.description}</p>
