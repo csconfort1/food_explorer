@@ -1,17 +1,16 @@
 import Swal from 'sweetalert2';
-
 import theme from '../../styles/theme';
 
 export async function alertRestrictedArea() {
   const userChoice = await Swal.fire({
-    title: 'Para utilizar esse recurso você precisa estar logado!',
+    title: 'Você precisa estar logado!',
     text: 'Deseja se logar agora?',
     icon: 'warning',
-    background: theme.COLORS.BLUE_700,
-    color: theme.COLORS.WHITE,
+    background: theme.COLORS.BLUE_200,
+    color: theme.COLORS.LIGHT_100,
 
     showCancelButton: true,
-    cancelButtonColor: theme.COLORS.RED_900,
+    cancelButtonColor: theme.COLORS.RED_100,
     cancelButtonText: 'Talvez mais tarde.',
     confirmButtonColor: '#ffffff33',
     confirmButtonText: 'Sim, logar agora!',
@@ -22,15 +21,15 @@ export async function alertRestrictedArea() {
 
 export async function confirmLogout() {
   const userChoice = await Swal.fire({
-    title: 'Tem certeza que deseja sair?',
+    title: 'Deseja sair?',
     icon: 'question',
-    background: theme.COLORS.BLUE_700,
+    background: theme.COLORS.BLUE_200,
     color: theme.COLORS.WHITE,
     showCancelButton: true,
-    cancelButtonColor: theme.COLORS.RED_900,
-    cancelButtonText: 'Não, quero ficar!',
+    cancelButtonColor: theme.COLORS.RED_100,
+    cancelButtonText: 'Não!',
     confirmButtonColor: '#ffffff33',
-    confirmButtonText: 'Sim, quero sair!',
+    confirmButtonText: 'Sim!',
   });
 
   return userChoice.isConfirmed;

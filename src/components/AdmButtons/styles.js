@@ -5,4 +5,4 @@ const Container = styled.div`
   gap: 10px;
 `;
 
-export { Container };
+export {Container};

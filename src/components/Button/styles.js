@@ -8,12 +8,10 @@ const Container = styled.button`
   align-items: center;
   gap: 10px;
   border-radius: 5px;
-  border: ${({ theme, isHighlighted }) =>
-    isHighlighted ? 'none' : `1px solid ${theme.COLORS.WHITE}`};
+  border: ${({ theme, isHighlighted }) => isHighlighted ? 'none' : `1px solid ${theme.COLORS.LIGHT_100}`};
   font-size: 1.4rem;
-  color: ${({ theme }) => theme.COLORS.WHITE};
-  background-color: ${({ theme, isHighlighted }) =>
-    isHighlighted ? `${theme.COLORS.RED_900}` : `${theme.COLORS.BLUE_200}`};
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  background-color: ${({ theme, isHighlighted }) => isHighlighted ? `${theme.COLORS.RED_200}` : `${theme.COLORS.BLUE_200}`};
 
   &:disabled {
     filter: brightness(0.5);
@@ -25,4 +23,4 @@ const Container = styled.button`
   }
 `;
 
-export { Container };
+export {Container};

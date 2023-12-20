@@ -1,6 +1,6 @@
-/*import { FiPlus, FiX } from 'react-icons/fi';*/
-
-import { Container } from './styles';
+import {TbHemispherePlus} from "react-icons/tb";
+import {GiKnifeFork} from "react-icons/gi";
+import {Container} from './styles';
 
 export function NewIngredient({ onClick, onChange, isNew, value, ...rest }) {
   return (
@@ -18,7 +18,7 @@ export function NewIngredient({ onClick, onChange, isNew, value, ...rest }) {
             type="button"
             onClick={onClick}
           >
-            +
+            <TbHemispherePlus/>
           </button>
         </>
       ) : (
@@ -28,7 +28,7 @@ export function NewIngredient({ onClick, onChange, isNew, value, ...rest }) {
             type="button"
             onClick={onClick}
           >
-            X
+            <GiKnifeFork/>
           </button>
         </>
       )}

@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-import { defaultBreakpoint } from '../../styles/variables';
-import { Container as Wrapper } from '../Wrapper/styles';
-import { Container as SearchBar } from './components/SearchBar/styles';
+import {defaultBreakpoint} from '../../styles/variables';
+import {Container as Wrapper} from '../Wrapper/styles';
+import {Container as SearchBar} from './components/SearchBar/styles';
 
 const Container = styled.header`
-  background-color: ${({ theme }) => theme.COLORS.BLUE_700};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
   padding: clamp(15px, 4vw, 30px) 0px;
 
   @media (min-width: ${defaultBreakpoint}) {
@@ -23,7 +23,7 @@ const Top = styled.div`
 
 const Brand = styled(Link)`
   align-items: center;
-  color: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
   display: flex;
   gap: 10px;
 `;
@@ -42,7 +42,7 @@ const ButtonMenu = styled.button`
   align-items: center;
   background-color: transparent;
   border: none;
-  color: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({theme}) => theme.COLORS.LIGHT_100};
   display: flex;
   font-size: 3.5rem;
   justify-content: center;
@@ -84,14 +84,4 @@ const Navigation = styled.nav`
   align-items: center;
 `;
 
-export {
-  Base,
-  Brand,
-  ButtonMenu,
-  Container,
-  Image,
-  MenuIcon,
-  Navigation,
-  Title,
-  Top,
-};
+export {Base, Brand, ButtonMenu, Container, Image, MenuIcon, Navigation, Title, Top,};

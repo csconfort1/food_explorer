@@ -1,34 +1,37 @@
-/*import { FiHeart, FiLogOut, FiShoppingCart, FiUser } from 'react-icons/fi';*/
-/*import { TfiReceipt } from 'react-icons/tfi';*/
+import {BsBalloonHeart} from "react-icons/bs";
+import {GiShoppingCart} from "react-icons/gi";
+import {IoReceiptOutline} from "react-icons/io5";
+import {SiCodechef} from "react-icons/si";
+import {AiOutlineLogout} from "react-icons/ai";
 
 export const clientLinks = [
   {
     name: 'Favoritos',
-    /*icon: <FiHeart />,*/
+    icon: <BsBalloonHeart/>,
     url: '/favorites',
     isRestrict: true,
   },
   {
     name: 'Carinho',
-    /*icon: <FiShoppingCart />,*/
+    icon: <GiShoppingCart/>,
     url: '/cart',
     isRestrict: false,
   },
   {
     name: 'Pedidos',
-    /*icon: <TfiReceipt />,*/
+    icon: <IoReceiptOutline/>,
     url: '/all-orders',
     isRestrict: true,
   },
   {
     name: 'Perfil',
-    /*icon: <FiUser />,*/
+    icon: <SiCodechef/>,
     url: '/profile',
     isRestrict: true,
   },
   {
     name: 'Entrar/Sair',
-    /*icon: <FiLogOut />,*/
+    icon: <AiOutlineLogout/>,
     url: '/login',
     isRestrict: false,
   },

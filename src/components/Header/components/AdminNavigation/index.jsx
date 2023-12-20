@@ -1,8 +1,8 @@
 import {Container, IconMenu, LinkName, ListItem, NavigationLink,} from '../navigationStyles';
-  import { adminLinks } from './data';
-  import { useAdminNavigation } from './useAdminNavigation';
+  import {adminLinks} from './data';
+  import {useAdminNavigation} from './useAdminNavigation';
   
-  export function AdminNavigation({ onLogout }) {
+  export function AdminNavigation({onLogout}) {
     const { handleNavigation } = useAdminNavigation(onLogout);
   
     return (

@@ -1,7 +1,6 @@
-import { useRef } from 'react';
-
-import { Card } from '../Card';
-import { Container } from './styles';
+import {useRef} from 'react';
+import {Card} from '../Card';
+import {Container} from './styles';
 
 export function Carousel({ title, meals }) {
   const carousel = useRef(null);
@@ -12,10 +11,7 @@ export function Carousel({ title, meals }) {
     const cardWidth = card.offsetWidth;
 
     const cardMargin = Number(
-      window
-        .getComputedStyle(card, null)
-        .getPropertyValue('margin-right')
-        .split('px')[0]
+      window.getComputedStyle(card, null).getPropertyValue('margin-right').split('px')[0]
     );
 
     return cardWidth + cardMargin;

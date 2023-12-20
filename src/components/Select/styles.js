@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.label`
   padding: 15px;
-  border: ${({ theme }) => `1px solid ${theme.COLORS.WHITE}`};
+  border: ${({ theme }) => `1px solid ${theme.COLORS.LIGHT_100}`};
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@ const Container = styled.label`
     }
 
     .red {
-      background-color: ${({ theme }) => theme.COLORS.RED_900};
+      background-color: ${({ theme }) => theme.COLORS.RED_400};
     }
 
     .orange {
@@ -36,14 +36,14 @@ const Container = styled.label`
   select {
     background-color: transparent;
     border: none;
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
-    -webkit-appearance: ${({ disabled }) => disabled && 'none'};
+    -webkit-appearance: ${({disabled}) => disabled && 'none'};
 
     option {
-      background-color: ${({ theme }) => theme.COLORS.BLUE_800};
+      background-color: ${({ theme }) => theme.COLORS.BLUE_200};
     }
   }
 `;
 
-export { Container };
+export {Container};

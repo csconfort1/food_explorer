@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
-
-import { Button } from '../Button';
-import { Card } from '../Card';
-import { Container } from './styles';
+import {useState, useRef, useEffect} from 'react';
+import {Button} from '../Button';
+import {Card} from '../Card';
+import {Container} from './styles';
 
 export function SectionMeals({ title, meals }) {
   const [showAFewCards, setShowAFewCards] = useState(true);
@@ -16,12 +15,7 @@ export function SectionMeals({ title, meals }) {
 
     const cardHight = card.offsetHeight;
 
-    const cardMargin = Number(
-      window
-        .getComputedStyle(card, null)
-        .getPropertyValue('margin-bottom')
-        .split('px')[0]
-    );
+    const cardMargin = Number(window.getComputedStyle(card, null).getPropertyValue('margin-bottom').split('px')[0]);
 
     return cardHight + cardMargin;
   }

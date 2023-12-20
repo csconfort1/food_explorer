@@ -1,22 +1,21 @@
-/*import { FiEdit2, FiTrash } from 'react-icons/fi';*/
-
-import { Button } from '../Button';
-import { Container } from './styles';
-import { useAdmButtons } from './useAdmButtons';
+import {FaRegTrashCan, FaPencil} from "react-icons/fa6";
+import {Button} from '../Button';
+import {Container} from './styles';
+import {useAdmButtons} from './useAdmButtons';
 
 export function AdmButtons({ meal_id }) {
-  const { handleDeleteMeal, handleEditMeal } = useAdmButtons({ meal_id });
+  const {handleDeleteMeal, handleEditMeal} = useAdmButtons({ meal_id });
 
   return (
     <Container>
       <Button
-        /*icon={FiEdit2}*/
+        icon={FaPencil}
         title="Editar"
         isHighlighted={false}
         onClick={handleEditMeal}
       />
       <Button
-        /*icon={FiTrash}*/
+        icon={FaRegTrashCan}
         title="Excluir"
         onClick={handleDeleteMeal}
       />

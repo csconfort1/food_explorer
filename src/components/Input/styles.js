@@ -12,9 +12,9 @@ const Container = styled.div`
   > input {
     margin-top: 10px;
     background-color: transparent;
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
     outline: none;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+    border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
     border-radius: 5px;
     padding: 15px;
     width: 100%;
@@ -25,4 +25,4 @@ const Container = styled.div`
   }
 `;
 
-export { Container };
+export {Container};

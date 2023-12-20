@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import { defaultBreakpoint } from '../../../styles/variables';
+import {defaultBreakpoint} from '../../../styles/variables';
 
 const Container = styled.ul`
   display: flex;
@@ -25,7 +24,7 @@ const ListItem = styled.li`
 
 const NavigationLink = styled.a`
   align-items: center;
-  color: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
   display: flex;
   font-size: clamp(1.4rem, 4vw, 1.6rem);
   gap: 10px;
@@ -43,4 +42,4 @@ const LinkName = styled.span`
   }
 `;
 
-export { Container, IconMenu, LinkName, ListItem, NavigationLink };
+export {Container, IconMenu, LinkName, ListItem, NavigationLink};

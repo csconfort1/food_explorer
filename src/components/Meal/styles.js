@@ -25,7 +25,7 @@ const Container = styled.div`
   }
 
   > p:nth-of-type(2) {
-    color: ${({ theme }) => theme.COLORS.GRAY_900};
+    color: ${({ theme }) => theme.COLORS.GRAY_700};
     font-size: clamp(1.4rem, 4vw, 1.6rem);
     grid-area: C;
   }
@@ -33,9 +33,9 @@ const Container = styled.div`
   > button {
     grid-area: D;
     justify-self: flex-start;
-    color: ${({ theme }) => theme.COLORS.RED_800};
+    color: ${({ theme }) => theme.COLORS.RED_400};
     font-size: clamp(1.4rem, 4vw, 1.6rem);
   }
 `;
 
-export { Container };
+export {Container};

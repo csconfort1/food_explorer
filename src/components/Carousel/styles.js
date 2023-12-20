@@ -9,7 +9,7 @@ const Container = styled.section`
     position: relative;
 
     > button {
-      color: ${({ theme }) => theme.COLORS.WHITE};
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
       font-size: 2.5rem;
     }
 
@@ -20,7 +20,7 @@ const Container = styled.section`
       bottom: 0;
       padding: 0 60px 0 15px;
       background: ${({ theme }) =>
-        `linear-gradient(to right, ${theme.COLORS.BLUE_800}, transparent)`};
+        `linear-gradient(to right, ${theme.COLORS.RED_100}, transparent)`};
     }
 
     > button:nth-of-type(2) {
@@ -30,7 +30,7 @@ const Container = styled.section`
       bottom: 0;
       padding: 0 15px 0 60px;
       background: ${({ theme }) =>
-        `linear-gradient(to left, ${theme.COLORS.BLUE_800}, transparent)`};
+        `linear-gradient(to left, ${theme.COLORS.RED_100}, transparent)`};
     }
   }
 
@@ -56,4 +56,4 @@ const Container = styled.section`
   }
 `;
 
-export { Container };
+export {Container};

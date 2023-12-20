@@ -1,12 +1,10 @@
-import { useState } from 'react';
-
-import { useRequest } from '../../hooks/request';
-import { validateRequest } from '../../utils/helpers';
-import { messages } from './messages';
+import {useState} from 'react';
+import {useRequest}  from '../../hooks/request';
+import {validateRequest} from '../../utils/helpers';
+import {messages} from './messages';
 
 export function useSelect({ order_id, status }) {
   const { manageRequests } = useRequest();
-
   const [currentStatus, setCurrentStatus] = useState(status);
 
   function handleChangeConfirmation() {

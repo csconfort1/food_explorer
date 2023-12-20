@@ -1,7 +1,6 @@
-/*import { FiSearch } from 'react-icons/fi';*/
-
-import { Container, Input, ButtonSearch } from './styles';
-import { useSearchBar } from './useSearchBar';
+import {BsSearchHeart} from "react-icons/bs";
+import {Container, Input, ButtonSearch} from './styles';
+import {useSearchBar} from './useSearchBar';
 
 export function SearchBar() {
   const { handleSearch } = useSearchBar();
@@ -15,7 +14,7 @@ export function SearchBar() {
       />
 
       <ButtonSearch>
-        Busca
+        <BsSearchHeart/>
       </ButtonSearch>
     </Container>
   );

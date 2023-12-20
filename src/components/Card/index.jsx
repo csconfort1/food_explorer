@@ -1,35 +1,26 @@
-import { useState, useEffect } from 'react';
-/*import { FaHeart } from 'react-icons/fa';*/
-/*import { FiHeart } from 'react-icons/fi';*/
-import { useNavigate } from 'react-router-dom';
-
-import { useAuth } from '../../hooks/auth';
-import { useRequest } from '../../hooks/request';
-import { api } from '../../services/api';
-import { handleImageRequest } from '../../utils/helpers';
-import { AdmButtons } from '../AdmButtons';
-import { ClientButtons } from '../ClientButtons';
-import { Container } from './styles';
+import {useState, useEffect} from 'react';
+import {BsBalloonHeartFill} from "react-icons/bs";
+import {BsBalloonHeart} from "react-icons/bs";
+import {useNavigate} from 'react-router-dom';
+import {useAuth} from '../../hooks/auth';
+import {useRequest} from '../../hooks/request';
+import {api} from '../../services/api';
+import {handleImageRequest} from '../../utils/helpers';
+import {AdmButtons} from '../AdmButtons';
+import {ClientButtons} from '../ClientButtons';
+import {Container} from './styles';
 
 export function Card({ meal_id, title, description, price, image, isFav }) {
   const [favoriteMeal, setFavoriteMeal] = useState(isFav);
   const [cardImage, setCardImage] = useState();
-
   const { userInfos } = useAuth();
-
   const navigate = useNavigate();
-
   const { manageRequests } = useRequest();
 
   function renderManipulationButtons() {
     if (!userInfos || !userInfos.isAdm) {
       return (
-        <ClientButtons
-          meal_id={meal_id}
-          title={title}
-          price={price}
-          image={image}
-        />
+        <ClientButtons meal_id={meal_id} title={title} price={price} image={image}/>
       );
     } else {
       return <AdmButtons meal_id={meal_id} />;
@@ -43,7 +34,7 @@ export function Card({ meal_id, title, description, price, image, isFav }) {
           type="button"
           onClick={handleAddToFavorite}
         >
-          {favoriteMeal ? /*<FaHeart />*/ coração1 :  coração2 /*<FiHeart />*/}
+          {favoriteMeal ? <BsBalloonHeartFill/> : <BsBalloonHeart/>}
         </button>
       );
     }
@@ -51,10 +42,7 @@ export function Card({ meal_id, title, description, price, image, isFav }) {
 
   async function handleAddToFavorite() {
     if (!userInfos) {
-      const response = confirm(`
-        Para utilizar esse recurso você precisa estar logado.
-        Deseja se logar agora?
-      `);
+      const response = confirm(`Você não está logado. Deseja logar?`);
 
       if (response) {
         navigate('/login');
@@ -77,9 +65,10 @@ export function Card({ meal_id, title, description, price, image, isFav }) {
   }
 
   async function renderImage() {
+    
     const url = `${api.defaults.baseURL}/files/meals/${image}`;
 
-    handleImageRequest({ url, setState: setCardImage });
+    handleImageRequest({url, setState: setCardImage });
   }
 
   useEffect(() => {
@@ -90,8 +79,8 @@ export function Card({ meal_id, title, description, price, image, isFav }) {
     <Container className="my-card">
       {renderButtonFav()}
       <img
-        src={cardImage}
-        alt={`Foto do prato ${title}`}
+        src= {`${cardImage}`}
+        alt={`${title}`}
         onClick={handleGoToDetails}
       />
       <h2 onClick={handleGoToDetails}>{`${title} >`}</h2>

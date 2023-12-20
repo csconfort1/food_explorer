@@ -21,10 +21,10 @@ const Container = styled.div`
     button {
       border: none;
       background-color: transparent;
-      color: ${({ theme }) => theme.COLORS.WHITE};
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
       font-size: 2rem;
     }
   }
 `;
 
-export { Container };
+export {Container};

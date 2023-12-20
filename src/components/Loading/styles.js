@@ -19,7 +19,7 @@ const Container = styled.div`
   .circle {
     animation: rotating 1s infinite;
     border-radius: 50%;
-    border: ${({ theme }) => `5px solid ${theme.COLORS.BLUE_700}`};
+    border: ${({ theme }) => `5px solid ${theme.COLORS.BLUE_200}`};
     border-top-color: ${({ theme }) => `${theme.COLORS.BLUE_100}`};
     height: 50px;
     width: 50px;
@@ -55,4 +55,4 @@ const Container = styled.div`
   }
 `;
 
-export { Container };
+export {Container};

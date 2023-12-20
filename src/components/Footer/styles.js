@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.footer`
   width: 100%;
   padding: clamp(17px, 5vw, 25px) 0;
-  background-color: ${({ theme }) => theme.COLORS.BLUE_700};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
 
   .my-wrapper {
     display: flex;
@@ -26,7 +26,7 @@ const Container = styled.footer`
     }
 
     h3 {
-      color: ${({ theme }) => theme.COLORS.GRAY_800};
+      color: ${({ theme }) => theme.COLORS.GRAY_400};
       font-size: clamp(1.7rem, 5vw, 2.5rem);
     }
 
@@ -40,10 +40,12 @@ const Container = styled.footer`
     text-align: center;
     font-size: clamp(1.2rem, 3vw, 1.4rem);
 
+    color: ${({ theme }) => theme.COLORS.GRAY_400};
+
     @media (max-width: 545px) {
       flex-grow: 1;
     }
   }
 `;
 
-export { Container };
+export {Container};

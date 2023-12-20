@@ -6,7 +6,7 @@ const Container = styled.div`
   gap: 10px;
 
   border: ${({ theme, isNew }) =>
-    isNew ? `1px dashed ${theme.COLORS.GRAY_900}` : 'none'};
+    isNew ? `1px dashed ${theme.COLORS.GRAY_700}` : 'none'};
   border-radius: 10px;
   padding: 6.5px 15px;
 
@@ -26,7 +26,7 @@ const Container = styled.div`
 
     svg {
       color: ${({ theme, isNew }) =>
-        isNew ? `${theme.COLORS.GRAY_900}` : `${theme.COLORS.WHITE}`};
+        isNew ? `${theme.COLORS.GRAY_700}` : `${theme.COLORS.LIGHT_100}`};
     }
   }
 
@@ -35,12 +35,12 @@ const Container = styled.div`
 
     background-color: transparent;
     border: none;
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
     &::placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY_900};
+      color: ${({ theme }) => theme.COLORS.GRAY_700};
     }
   }
 `;
 
-export { Container };
+export {Container};

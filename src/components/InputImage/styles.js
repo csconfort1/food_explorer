@@ -17,7 +17,7 @@ const Container = styled.div`
     justify-content: center;
     gap: 10px;
     width: 100%;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+    border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
     border-radius: 5px;
     padding: 15px;
     cursor: pointer;
@@ -28,4 +28,4 @@ const Container = styled.div`
   }
 `;
 
-export { Container };
+export {Container};

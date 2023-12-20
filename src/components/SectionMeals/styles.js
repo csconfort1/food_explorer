@@ -17,4 +17,4 @@ const Container = styled.section`
   }
 `;
 
-export { Container };
+export {Container};

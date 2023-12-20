@@ -1,11 +1,9 @@
-import { useLocation, useNavigate } from 'react-router-dom';
-
-import { useMeals } from '../../../../hooks/meals';
+import {useLocation, useNavigate} from 'react-router-dom';
+import {useMeals} from '../../../../hooks/meals';
 
 export function useSearchBar() {
   const location = useLocation();
   const navigate = useNavigate();
-
   const { mealsInDB, setMealsInDB, organizedMeals, setOrganizedMeals } =
     useMeals();
 

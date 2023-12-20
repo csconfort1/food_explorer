@@ -1,11 +1,8 @@
-import { Container } from './styles';
-import { useSelect } from './useSelect';
+import {Container} from './styles';
+import {useSelect} from './useSelect';
 
 export function Select({ order_id, status, disabled }) {
-  const { currentStatus, handleChangeStatus } = useSelect({
-    order_id,
-    status,
-  });
+  const { currentStatus, handleChangeStatus } = useSelect({order_id, status,});
 
   return (
     <Container disabled={disabled}>

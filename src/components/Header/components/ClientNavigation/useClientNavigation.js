@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-
-import { alertRestrictedArea } from '../../alerts';
-import { clientLinks } from './data';
+import {useNavigate} from 'react-router-dom';
+import {alertRestrictedArea} from '../../alerts';
+import {clientLinks} from './data';
 
 export function useClientNavigation({ isUserLoggedIn, onLogout }) {
   const navigate = useNavigate();

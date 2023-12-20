@@ -5,8 +5,7 @@ const Container = styled.div`
   max-width: 300px;
   margin: 0 auto 25px;
   padding: 20px 20px 35px;
-  background-color: ${({ theme }) => theme.COLORS.BLUE_900};
-  border: 1px solid black;
+  background-color: ${({ theme }) => theme.COLORS.RED_100};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,7 @@ const Container = styled.div`
   gap: 15px;
 
   > button:first-child {
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
     font-size: clamp(2rem, 6vw, 2.4rem);
     align-self: flex-end;
   }
@@ -42,7 +41,7 @@ const Container = styled.div`
 
   p:nth-of-type(2) {
     font-size: 3.2rem;
-    color: ${({ theme }) => theme.COLORS.BLUE_100};
+    color: ${({ theme }) => theme.COLORS.BLUE_200};
   }
 
   > .client-buttons {
@@ -51,4 +50,4 @@ const Container = styled.div`
   }
 `;
 
-export { Container };
+export {Container};

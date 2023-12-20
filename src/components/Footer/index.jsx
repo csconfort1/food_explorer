@@ -10,7 +10,7 @@ export function Footer() {
           <img src={DiscreetLogo} alt="Foto do logotipo"/>
           <h3>food explorer</h3>
         </div>
-        <p>&copy; 2022 - Todos os direitos reservados</p>
+        <p> csamp - &copy; 2022 - Todos os direitos reservados</p>
       </Wrapper>
     </Container>
   );

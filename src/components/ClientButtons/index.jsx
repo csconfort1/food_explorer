@@ -1,19 +1,11 @@
-import { useState } from 'react';
-/*import { TfiReceipt } from 'react-icons/tfi';*/
+import {useState} from 'react';
+import {TfiReceipt} from 'react-icons/tfi';
+import {useCart} from '../../hooks/cart';
+import {Button} from '../Button';
+import {Container} from './styles';
 
-import { useCart } from '../../hooks/cart';
-import { Button } from '../Button';
-import { Container } from './styles';
-
-export function ClientButtons({
-  withIcon = false,
-  meal_id,
-  title,
-  price,
-  image,
-}) {
+export function ClientButtons({ withIcon = false, meal_id, title, price, image,}) {
   const [amount, setAmount] = useState(1);
-
   const { handleAddMeal } = useCart();
 
   function handleAmount(isItAdd) {
@@ -49,7 +41,7 @@ export function ClientButtons({
       </div>
       {withIcon ? (
         <Button
-          /*icon={TfiReceipt}*/
+          icon={TfiReceipt}
           title="incluir"
           onClick={() => {
             handleAddMeal({ meal_id, title, price, image, amount });
