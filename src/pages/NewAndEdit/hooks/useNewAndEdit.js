@@ -1,29 +1,22 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-
-import { useRequest } from '../../../hooks/request';
-import { validateRequest } from '../../../utils/helpers';
+import {useEffect, useState} from 'react';
+import {useNavigate, useLocation} from 'react-router-dom';
+import {useRequest} from '../../../hooks/request';
+import {validateRequest} from '../../../utils/helpers';
 
 export function useNewAndEdit() {
   const [modalOpen, setModalOpen] = useState(false);
-
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
-
   const [photo, setPhoto] = useState(null);
-
   const [newIngredient, setNewIngredient] = useState('');
   const [ingredientsOfThisMeal, setIngredientsOfThisMeal] = useState([]);
   const [ingredientsRegisteredInDB, setIngredientsRegisteredInDB] = useState();
-
   const [editInterface, setEditInterface] = useState(false);
   const [mealInfos, setMealInfos] = useState();
-
   const navigate = useNavigate();
   const location = useLocation();
-
   const { manageRequests } = useRequest();
 
   function handleModal() {
@@ -78,9 +71,7 @@ export function useNewAndEdit() {
 
   function showMessageIfThereIsAnError(withoutErros) {
     if (!withoutErros) {
-      alert(
-        'Não foi possível carregar os dados! Por favor, tente novamente mais tarde.'
-      );
+      alert('Não foi possível carregar os dados!');
     }
   }
 
@@ -92,14 +83,11 @@ export function useNewAndEdit() {
 
   function resetAllStates() {
     setModalOpen(false);
-
     setTitle('');
     setCategory('');
     setPrice('');
     setDescription('');
-
     setPhoto(null);
-
     setNewIngredient('');
     setIngredientsOfThisMeal([]);
   }
@@ -108,9 +96,7 @@ export function useNewAndEdit() {
     const response = await fetchIngredients();
     const responseChecked = validateTheResponse(response);
     showMessageIfThereIsAnError(responseChecked);
-
     checkIfThisPageWillBeRendered(responseChecked);
-
     setIngredientsRegisteredInDB(response.data);
   }
 

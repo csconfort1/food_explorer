@@ -83,7 +83,7 @@ const Ingredients = styled.div`
   .new-ingredients {
     width: 100%;
     padding: 10px;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+    border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
     border-radius: 5px;
     display: flex;
 
@@ -105,10 +105,10 @@ const Description = styled.div`
   textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+    border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_100};
     border-radius: 5px;
     background-color: transparent;
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
     resize: none;
     min-height: 170px;
   }
@@ -142,7 +142,7 @@ const Modal = styled.div`
   .alert {
     max-width: 500px;
     margin: auto;
-    background-color: ${({ theme }) => theme.COLORS.BLUE_700};
+    background-color: ${({ theme }) => theme.COLORS.BLUE_200};
     padding: clamp(15px, 4vw, 40px);
     border-radius: 10px;
     box-shadow: 0 0 20px 15px black;
@@ -172,7 +172,7 @@ const Modal = styled.div`
       align-self: flex-end;
 
       svg {
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
         font-size: 4rem;
       }
     }
@@ -183,4 +183,4 @@ const Modal = styled.div`
   }
 `;
 
-export { Container, Form, Ingredients, Description, Modal };
+export {Container, Form, Ingredients, Description, Modal};

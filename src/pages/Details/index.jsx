@@ -1,14 +1,12 @@
 import {useState, useEffect} from 'react';
-/*import {FiArrowLeft} from "react-icons/fi";*/
+import {FaRegArrowAltCircleLeft} from "react-icons/fa";
 import {useNavigate, useParams} from 'react-router-dom';
-
 import {AdmButtons} from '../../components/AdmButtons';
 import {ButtonText} from '../../components/ButtonText';
 import {ClientButtons} from '../../components/ClientButtons';
 import {Footer} from '../../components/Footer';
 import {Header} from '../../components/Header';
 import {Ingredient} from '../../components/Ingredient';
-import {Loading} from '../../components/Loading';
 import {Wrapper} from '../../components/Wrapper';
 import {useAuth} from '../../hooks/auth';
 import {useRequest} from '../../hooks/request';
@@ -66,7 +64,7 @@ export function Details() {
       const response = await manageRequests('get', `/meals/${id}`);
 
       if (response instanceof Error) {
-        return navigate('/');
+        return navigate('/home');
       }
 
       const theRequestWasSuccessful = response.status === 201;
@@ -78,9 +76,7 @@ export function Details() {
       if (response.data) {
         alert(response.data.message);
       } else {
-        alert(
-          'Não foi possível carregar as informações!'
-        );
+        alert('Não foi possível carregar as informações!');
       }
 
       return navigate('/');
@@ -91,11 +87,10 @@ export function Details() {
 
   return (
     <Container>
-      <Header />
+      <Header/>
       <Wrapper>
-        {mealInfos ? (
           <Content>
-            <ButtonText title="voltar" /*icon={FiArrowLeft}*/ to="/"></ButtonText>
+            <ButtonText title="voltar" icon={FaRegArrowAltCircleLeft} to="/"></ButtonText>
             <img src={mealImage} alt={`Foto do item ${mealInfos.title}`}/>
             <h1>{mealInfos.title}</h1>
             <p>{mealInfos.description}</p>
@@ -107,9 +102,6 @@ export function Details() {
             </p>
             <div className="buttons">{renderManipulationButtons()}</div>
           </Content>
-        ) : (
-          <Loading />
-        )}
       </Wrapper>
       <Footer />
     </Container>

@@ -13,7 +13,6 @@ const Container = styled.div`
     h3 {
       position: relative;
       z-index: 2;
-      text-shadow: 0 0 10px black;
     }
 
     h1 {
@@ -22,12 +21,14 @@ const Container = styled.div`
       font-size: clamp(3.2rem, 8vw, 4rem);
       line-height: 100%;
       margin-bottom: 15px;
+      margin-left: -5rem;
     }
 
     h3 {
       font-family: 'Poppins', sans-serif;
       font-size: clamp(1.4rem, 4vw, 1.6rem);
       font-weight: 400;
+      margin-left: -5rem;
     }
   }
 `;
@@ -47,7 +48,7 @@ const Mobile = styled.main`
     position: relative;
     overflow: hidden;
     background: ${({ theme }) =>
-      `linear-gradient(${theme.COLORS.BLUE_300}, ${theme.COLORS.BLUE_600})`};
+      `linear-gradient(${theme.COLORS.RED_100}, ${theme.COLORS.RED_100})`};
 
     img {
       position: absolute;
@@ -67,7 +68,7 @@ const Desktop = styled.main`
 
   .top-desktop {
     background: ${({ theme }) =>
-      `linear-gradient(${theme.COLORS.BLUE_300}, ${theme.COLORS.BLUE_600})`};
+      `linear-gradient(${theme.COLORS.RED_100}, ${theme.COLORS.RED_100})`};
     border-radius: 10px;
     margin: 150px 0 35px;
     padding: 85px 0;
@@ -95,4 +96,4 @@ const Desktop = styled.main`
   }
 `;
 
-export { Container, Mobile, Desktop };
+export {Container, Mobile, Desktop};

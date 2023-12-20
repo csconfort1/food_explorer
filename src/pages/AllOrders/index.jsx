@@ -3,7 +3,6 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import {Footer} from '../../components/Footer';
 import {Header} from '../../components/Header';
-import {Loading} from '../../components/Loading';
 import {Select} from '../../components/Select';
 import {Wrapper} from '../../components/Wrapper';
 import {useAuth} from '../../hooks/auth';
@@ -13,8 +12,8 @@ import {Container, Content, Table} from './styles';
 export function AllOrders() {
   const [orders, setOrders] = useState();
 
-  const { manageRequests } = useRequest();
-  const { userInfos } = useAuth();
+  const {manageRequests} = useRequest();
+  const {userInfos} = useAuth();
 
   const navigate = useNavigate();
 
@@ -45,9 +44,7 @@ export function AllOrders() {
       if (response.data) {
         alert(response.data.message);
       } else {
-        alert(
-          'Não foi possível carregar os pedidos!'
-        );
+        alert('Não foi possível carregar os pedidos!');
       }
       return navigate('/');
     }
@@ -59,10 +56,6 @@ export function AllOrders() {
     <Container>
       <Header />
       <Wrapper>
-        {!orders ? 
-        (
-        <Loading />
-        ) : (
           <Content>
             <h1>Pedidos</h1>
             {orders.length == 0 ? (
@@ -107,7 +100,7 @@ export function AllOrders() {
               </Table>
             )}
           </Content>
-        )}
+        
       </Wrapper>
       <Footer/>
     </Container>

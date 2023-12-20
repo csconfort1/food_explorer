@@ -1,9 +1,5 @@
 import {useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
-
-import Check from '../../static/images/check.svg';
-import Clock from '../../static/images/clock.svg';
-import ForkAndKnife from '../../static/images/fork-knife.svg';
 import {Footer} from '../../components/Footer';
 import {Header} from '../../components/Header';
 import {Loading} from '../../components/Loading';
@@ -11,6 +7,9 @@ import {Meal} from '../../components/Meal';
 import {Wrapper} from '../../components/Wrapper';
 import {useRequest} from '../../hooks/request';
 import {Cart,Container,Content,Situation} from './styles';
+import Check from '../../static/images/check.svg';
+import Clock from '../../static/images/clock.svg';
+import ForkAndKnife from '../../static/images/fork-knife.svg';
 
 export function Order() {
   const [orderInfos, setOrderInfos] = useState();
@@ -26,21 +25,21 @@ export function Order() {
       case 'pending':
         return (
           <>
-            <img src={Clock} alt="Foto de um relógio."/>
+            <img src={Clock} alt="Aguardando confirmação do pagamento"/>
             <p>Aguardando confirmação do pagamento</p>
           </>
         );
       case 'preparing':
         return (
           <>
-            <img src={Check} alt="Foto de um sinal de positivo."/>
+            <img src={Check} alt="Pagamento aprovado"/>
             <p>Pagamento aprovado!</p>
           </>
         );
       case 'delivered':
         return (
           <>
-            <img src={ForkAndKnife} alt="Foto de um garfo e uma faca."/>
+            <img src={ForkAndKnife} alt="Pedido entregue"/>
             <p>Pedido entregue!</p>
           </>
         );

@@ -1,6 +1,6 @@
-import { showErrorMessage } from '../../../utils/helpers';
-import { formatPrice } from '../utils/helpers';
-import { errorMessages } from '../utils/messages';
+import {showErrorMessage} from '../../../utils/helpers';
+import {formatPrice} from '../utils/helpers';
+import {errorMessages} from '../utils/messages';
 
 export function useValidations({
   title,

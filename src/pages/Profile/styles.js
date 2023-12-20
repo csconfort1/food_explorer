@@ -36,4 +36,4 @@ const Form = styled.form`
   }
 `;
 
-export { Container, Form };
+export {Container, Form};

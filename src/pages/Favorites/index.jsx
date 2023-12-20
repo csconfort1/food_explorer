@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { Card } from '../../components/Card';
-import { Footer } from '../../components/Footer';
-import { Header } from '../../components/Header';
-import { Loading } from '../../components/Loading';
-import { Wrapper } from '../../components/Wrapper';
-import { useRequest } from '../../hooks/request';
-import { Container, Content } from './styles';
+import {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {Card} from '../../components/Card';
+import {Footer} from '../../components/Footer';
+import {Header} from '../../components/Header';
+import {Wrapper} from '../../components/Wrapper';
+import {useRequest} from '../../hooks/request';
+import {Container, Content} from './styles';
 
 export function Favorites() {
   const [favorites, setFavorites] = useState();
@@ -27,17 +25,13 @@ export function Favorites() {
       }
 
       if (response instanceof Error) {
-        alert(
-          'Não foi possível carregar as informações! Por favor tente novamente mais tarde.'
-        );
+        alert('Não foi possível carregar as informações!');
       }
 
       if (response.data) {
         alert(response.data.message);
       } else {
-        alert(
-          'Não foi possível carregar as informações! Por favor tente novamente mais tarde.'
-        );
+        alert('Não foi possível carregar as informações!');
       }
 
       return navigate('/');
@@ -50,9 +44,6 @@ export function Favorites() {
     <Container>
       <Header />
       <Wrapper>
-        {!favorites ? (
-          <Loading />
-        ) : (
           <Content>
             {favorites.length == 0 ? (
               <h1>Você ainda não tem favoritos</h1>
@@ -80,7 +71,6 @@ export function Favorites() {
               </>
             )}
           </Content>
-        )}
       </Wrapper>
       <Footer />
     </Container>

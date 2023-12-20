@@ -1,7 +1,5 @@
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-
-import Logo from '../../static/images/logo.png';
 import {Button} from '../../components/Button';
 import {ButtonText} from '../../components/ButtonText';
 import {Input} from '../../components/Input';
@@ -10,6 +8,7 @@ import {useAuth} from '../../hooks/auth';
 import {useRequest} from '../../hooks/request';
 import {validateDataToSignIn} from '../../utils/dataValidator';
 import {Container, Brand, Form} from './styles';
+import Logo from '../../static/images/logo.png';
 
 export function SignIn() {
   const [email, setEmail] = useState('');

@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
-/*import {FaRegArrowAltCircleLeft} from "react-icons/fa";*/
-
-import { Button } from '../../components/Button';
-import { ButtonText } from '../../components/ButtonText';
-import { Footer } from '../../components/Footer';
-import { Header } from '../../components/Header';
-import { Input } from '../../components/Input';
-import { Loading } from '../../components/Loading';
-import { Wrapper } from '../../components/Wrapper';
-import { useAuth } from '../../hooks/auth';
-import { useRequest } from '../../hooks/request';
-import { validateDataToProfile } from '../../utils/dataValidator';
-import { Container, Form } from './styles';
+import {useState, useEffect} from 'react';
+import {FaRegArrowAltCircleLeft} from "react-icons/fa";
+import {Button} from '../../components/Button';
+import {ButtonText} from '../../components/ButtonText';
+import {Footer} from '../../components/Footer';
+import {Header} from '../../components/Header';
+import {Input} from '../../components/Input';
+import {Loading} from '../../components/Loading';
+import {Wrapper} from '../../components/Wrapper';
+import {useAuth} from '../../hooks/auth';
+import {useRequest} from '../../hooks/request';
+import {validateDataToProfile} from '../../utils/dataValidator';
+import {Container, Form} from './styles';
 
 export function Profile() {
   const [name, setName] = useState('');
@@ -25,44 +24,31 @@ export function Profile() {
   const { manageRequests } = useRequest();
 
   async function handleUpdateInfos() {
-    const areAllEntriesValid = validateDataToProfile({
-      name,
-      email,
-      oldPassword,
-      newPassword,
-    });
+    const areAllEntriesValid = validateDataToProfile({name, email, oldPassword, newPassword,});
 
     if (!areAllEntriesValid) return;
 
     setShowLoadingScreen(prevState => !prevState);
 
-    const response = await manageRequests('put', '/users', {
-      name,
-      email,
-      old_password: oldPassword,
-      new_password: newPassword,
-    });
+    const response = await manageRequests('put', '/users', {name, email, old_password: oldPassword, new_password: newPassword,});
 
     setShowLoadingScreen(prevState => !prevState);
 
     const updatedSuccessfully = response.status === 201;
 
     if (updatedSuccessfully) {
-      return alert('Informações atualizadas com sucesso!');
+      return alert('Informações atualizadas!');
     }
 
     if (response.data) {
       return alert(response.data.message);
     } else {
-      return alert(
-        'Não foi possível atualizar os dados. Por favor tente novamente mais tarde.'
-      );
+      return alert('Não foi possível atualizar os dados.');
     }
   }
 
   useEffect(() => {
     setName(userInfos.name);
-
     setEmail(userInfos.email);
   }, []);
 
@@ -73,7 +59,7 @@ export function Profile() {
         <Form>
           <ButtonText
             title="voltar"
-            /*icon={FaRegArrowAltCircleLeft}*/
+            icon={FaRegArrowAltCircleLeft}
             to="/"
           />
           <h1>Meu perfil</h1>

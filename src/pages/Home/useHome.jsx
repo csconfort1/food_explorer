@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-
-import { Carousel } from '../../components/Carousel';
-import { SectionMeals } from '../../components/SectionMeals';
-import { useAuth } from '../../hooks/auth';
-import { useMeals } from '../../hooks/meals';
-import { useRequest } from '../../hooks/request';
+import {useState, useEffect} from 'react';
+import {useNavigate, useSearchParams} from 'react-router-dom';
+import {Carousel} from '../../components/Carousel';
+import {SectionMeals} from '../../components/SectionMeals';
+import {useAuth} from '../../hooks/auth';
+import {useMeals} from '../../hooks/meals';
+import {useRequest} from '../../hooks/request';
 
 export function useHome() {
   const { setMealsInDB, organizedMeals, setOrganizedMeals } = useMeals();
@@ -28,11 +27,7 @@ export function useHome() {
       );
 
       return (
-        <Carousel
-          title={category}
-          meals={mealsFiltered}
-          key={String(category)}
-        />
+        <Carousel title={category} meals={mealsFiltered} key={String(category)}/>
       );
     });
   }

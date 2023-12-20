@@ -1,7 +1,5 @@
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-
-import Logo from '../../static/images/logo.png';
 import {Button} from '../../components/Button';
 import {ButtonText} from '../../components/ButtonText';
 import {Input} from '../../components/Input';
@@ -9,6 +7,7 @@ import {Loading} from '../../components/Loading';
 import {useRequest} from '../../hooks/request';
 import {validateDataToSignUp} from '../../utils/dataValidator';
 import {Container, Brand, Form} from './styles';
+import Logo from '../../static/images/logo.png';
 
 export function SignUp() {
   const [name, setName] = useState('');
@@ -49,13 +48,13 @@ export function SignUp() {
       if (response.data) {
         alert(response.data.message);
       } else {
-        alert('Não foi possível logar. Por favor tente novamente mais tarde.');
+        alert('Não foi possível logar.');
       }
 
       return;
     }
 
-    alert('Usuário cadastrado com sucesso! Agora você pode se logar.');
+    alert('Usuário cadastrado com sucesso!');
     navigate('/login');
   }
 

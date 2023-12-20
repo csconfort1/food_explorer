@@ -1,7 +1,7 @@
-import { useRequest } from '../../../hooks/request';
-import { validateRequest } from '../../../utils/helpers';
-import { formatPrice } from '../utils/helpers';
-import { errorMessages } from '../utils/messages';
+import {useRequest} from '../../../hooks/request';
+import {validateRequest} from '../../../utils/helpers';
+import {formatPrice} from '../utils/helpers';
+import {errorMessages} from '../utils/messages';
 
 export function useRegisterMeal({
   title,

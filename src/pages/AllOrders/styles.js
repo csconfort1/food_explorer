@@ -74,7 +74,7 @@ const Table = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
   }
 `;
 

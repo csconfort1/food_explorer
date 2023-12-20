@@ -1,21 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {useRequest} from '../../../hooks/request';
+import {validateRequest} from '../../../utils/helpers';
+import {formatPrice} from '../utils/helpers';
 
-import { useRequest } from '../../../hooks/request';
-import { validateRequest } from '../../../utils/helpers';
-import { formatPrice } from '../utils/helpers';
-
-export function useEditMeal({
-  inputsValidation,
-  mealInfos,
-  title,
-  category,
-  price,
-  description,
-  ingredients,
-  photo,
-}) {
+export function useEditMeal({inputsValidation, mealInfos, title, category, price, description, ingredients, photo,}) {
   const navigate = useNavigate();
-
   const { manageRequests } = useRequest();
 
   async function requestUpdateMeal() {

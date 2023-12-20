@@ -1,10 +1,7 @@
 import {useEffect, useState} from 'react';
-/*import {FaRegCreditCard} from "react-icons/fa";*/
-/*import {IoReceiptOutline} from "react-icons/io5";*/
+import {FaRegCreditCard} from "react-icons/fa";
+import {IoReceiptOutline} from "react-icons/io5";
 import {useNavigate} from 'react-router-dom';
-
-import pixImg from '../../static/images/pix.svg';
-import qrCodeImg from '../../static/images/qrcode.svg';
 import {Button} from '../../components/Button';
 import {Footer} from '../../components/Footer';
 import {Header} from '../../components/Header';
@@ -15,6 +12,8 @@ import {useAuth} from '../../hooks/auth';
 import {useCart} from '../../hooks/cart';
 import {useRequest} from '../../hooks/request';
 import {Cart,Container,Content,Payment} from './styles';
+import pixImg from '../../static/images/pix.svg';
+import qrCodeImg from '../../static/images/qrcode.svg';
 
 export function ShoppingCart() {
   const { userInfos } = useAuth();
@@ -43,9 +42,7 @@ export function ShoppingCart() {
 
   function warnAboutEmptyInputs(haveAnyEmpty) {
     if (haveAnyEmpty) {
-      alert(
-        'Para realizar o pagamento por cartão, é necessário preencher todos os campos! Verifique e tente novamente.'
-      );
+      alert('Favor preencher todos os campos!');
     }
   }
 
@@ -60,9 +57,7 @@ export function ShoppingCart() {
 
   function alertAboutTheWrongAmountOfNumber(allNumbersAreRight) {
     if (!allNumbersAreRight) {
-      alert(
-        'Parece que alguns números do cartão foram preenchidos incorretamente! Verifique e tente novamente.'
-      );
+      alert('Números incorretos!');
     }
   }
 
@@ -80,10 +75,7 @@ export function ShoppingCart() {
 
   async function handleFinalizePurchase() {
     if (!userInfos) {
-      const response = confirm(`
-        Para utilizar esse recurso você precisa estar logado.
-        Deseja se logar agora?
-      `);
+      const response = confirm(`Você precisa estar logado. Deseja se logar agora?`);
 
       if (response) {
         navigate('/login');
@@ -114,9 +106,7 @@ export function ShoppingCart() {
     if (wasTheRequestSuccessfullyMade) {
       emptyTheCart();
 
-      alert(
-        'Pedido feito com sucesso! Agora aguarde a confirmação do pagamento.'
-      );
+      alert('Pedido realizado! Aguarde confirmação do pagamento.');
 
       navigate('/all-orders');
 
@@ -126,9 +116,7 @@ export function ShoppingCart() {
     if (response.data) {
       return alert(response.data.message);
     } else {
-      return alert(
-        'Não foi possível concluir a compra! Por favor tente novamente mais tarde.'
-      );
+      return alert('Compra não concluída!');
     }
   }
 
@@ -151,7 +139,7 @@ export function ShoppingCart() {
       <Wrapper>
         <Content>
           {!mealsInCart.length ? (
-            <h1>Nenhum prato foi adicionado ainda!</h1>
+            <h1>Nenhum prato foi adicionado!</h1>
           ) : (
             <>
               <Cart>
@@ -192,6 +180,7 @@ export function ShoppingCart() {
                       className={cardPayment ? 'selected-payment' : ''}
                       onClick={() => handlePaymentOption(true)}
                     >
+                      <FaRegCreditCard/>
                       Crédito
                     </button>
                   </div>
@@ -231,7 +220,7 @@ export function ShoppingCart() {
                     </form>
                     <Button
                       title="Finalizar Pagamento"
-                      /*icon={IoReceiptOutline}*/
+                      icon={IoReceiptOutline}
                       onClick={handleFinalizePurchase}
                     />
                   </div>

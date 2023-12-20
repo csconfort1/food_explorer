@@ -52,7 +52,7 @@ const Situation = styled.section`
     padding: clamp(30px, 9vw, 60px) 10px;
     color: ${({ theme }) => theme.COLORS.GRAY_700};
     text-align: center;
-    border: ${({ theme }) => `1px solid ${theme.COLORS.BLUE_500}`};
+    border: ${({ theme }) => `1px solid ${theme.COLORS.BLUE_200}`};
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -66,4 +66,4 @@ const Situation = styled.section`
   }
 `;
 
-export { Container, Content, Cart, Situation };
+export {Container, Content, Cart, Situation};

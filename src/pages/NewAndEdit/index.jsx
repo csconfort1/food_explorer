@@ -1,21 +1,19 @@
-/*import {SlClose} from "react-icons/sl";*/
-/*import {FaRegArrowAltCircleLeft} from "react-icons/fa";*/
-
-import { Button } from '../../components/Button';
-import { ButtonText } from '../../components/ButtonText';
-import { Footer } from '../../components/Footer';
-import { Header } from '../../components/Header';
-import { Input } from '../../components/Input';
-import { InputImage } from '../../components/InputImage';
-import { Loading } from '../../components/Loading';
-import { NewIngredient } from '../../components/NewIngredient';
-import { Wrapper } from '../../components/Wrapper';
-import { useEditMeal } from './hooks/useEditMeal';
-import { useNewAndEdit } from './hooks/useNewAndEdit';
-import { useRegisterMeal } from './hooks/useRegisterMeal';
-import { useRegisterNewIngredient } from './hooks/useRegisterNewIngredient';
-import { useValidations } from './hooks/useValidations';
-import { Container, Description, Form, Ingredients, Modal } from './styles';
+import {SlClose} from "react-icons/sl";
+import {FaRegArrowAltCircleLeft} from "react-icons/fa";
+import {Button} from '../../components/Button';
+import {ButtonText} from '../../components/ButtonText';
+import {Footer} from '../../components/Footer';
+import {Header} from '../../components/Header';
+import {Input} from '../../components/Input';
+import {InputImage} from '../../components/InputImage';
+import {NewIngredient} from '../../components/NewIngredient';
+import {Wrapper} from '../../components/Wrapper';
+import {useEditMeal} from './hooks/useEditMeal';
+import {useNewAndEdit} from './hooks/useNewAndEdit';
+import {useRegisterMeal} from './hooks/useRegisterMeal';
+import {useRegisterNewIngredient} from './hooks/useRegisterNewIngredient';
+import {useValidations} from './hooks/useValidations';
+import {Container, Description, Form, Ingredients, Modal} from './styles';
 
 export function NewAndEdit() {
   const {
@@ -85,14 +83,6 @@ export function NewAndEdit() {
     photo,
   });
 
-  if (!ingredientsRegisteredInDB) {
-    return <Loading />;
-  }
-
-  if (editInterface && !mealInfos) {
-    return <Loading />;
-  }
-
   return (
     <Container>
       <Header />
@@ -100,7 +90,7 @@ export function NewAndEdit() {
         <Form>
           <ButtonText
             title="voltar"
-            /*icon={FaRegArrowAltCircleLeft}*/
+            icon={FaRegArrowAltCircleLeft}
             to="/"
           />
           {!editInterface && <h1>Adicionar Prato</h1>}
@@ -184,11 +174,12 @@ export function NewAndEdit() {
             type="button"
             onClick={handleModal}
           >
+
+          <SlClose/>  
           </button>
           <h2>Ingrediente Novo!</h2>
           <p>
-            Identificamos que você adicionou um Ingrediente novo. Gostaria de
-            adicionar uma foto à ele?
+            Identificamos que você adicionou um novo Ingrediente. Gostava de adicionar uma imagem à ele?
           </p>
           <Input
             title="Nome"

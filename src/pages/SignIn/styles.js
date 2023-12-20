@@ -38,7 +38,7 @@ const Form = styled.form`
   margin: auto;
   padding: 80px clamp(15px, 4vw, 40px);
   text-align: center;
-  background-color: ${({ theme }) => theme.COLORS.BLUE_700};
+  background-color: ${({ theme }) => theme.COLORS.BLUE_200};
 
   @media (min-width: 540px) {
     min-height: initial;
@@ -79,4 +79,4 @@ const Form = styled.form`
   }
 `;
 
-export { Container, Brand, Form };
+export {Container, Brand, Form};

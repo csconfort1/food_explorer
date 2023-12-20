@@ -31,4 +31,4 @@ const Content = styled.main`
   }
 `;
 
-export { Container, Content };
+export {Container, Content};
