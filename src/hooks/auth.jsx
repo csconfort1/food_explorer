@@ -7,11 +7,13 @@ function AuthProvider({children}){
     const[userInfos, setUserInfos] = useState({});
 
     function authenticateUser({ user,token}) {setUserInfos(user);
-        api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    
+            
         localStorage.setItem('@food_explorer:user', JSON.stringify(user));
         localStorage.setItem('@food_explorer:token', token);
         localStorage.setItem('@food_explorer:session_created_at', JSON.stringify(Date.now()));
+
+        api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        setData({user, token});
       }
     
       function clearLoginData() {setUserInfos(null);

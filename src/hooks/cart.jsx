@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
 
 const CartContext = createContext();
 
@@ -12,7 +12,7 @@ function CartProvider({ children }) {
     if (!mealAlreadyAdd) {
       setMealsInCart(prevState => [newMeal, ...prevState]);
 
-      localStorage.setItem('@food_explorer-meals', JSON.stringify([newMeal, ...mealsInCart])
+      localStorage.setItem('@food_explorere-meals', JSON.stringify([newMeal, ...mealsInCart])
       );
 
       alert('Prato(s) adicionado(s)!');
