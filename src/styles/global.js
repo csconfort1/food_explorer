@@ -25,7 +25,7 @@ export default createGlobalStyle`
     }
 
     body{
-        background-color: ${({theme}) => theme.COLORS.BACKGROUND_400};
+        background-color: ${({theme}) => theme.COLORS.BACKGROUND_100};
         color: ${({theme}) => theme.COLORS.LIGHT_100};
     }
 
