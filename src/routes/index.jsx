@@ -1,5 +1,4 @@
 import {HashRouter} from 'react-router-dom';
-
 import {useAuth}  from '../hooks/auth';
 import {AdmRoutes} from './adm.routes';
 import {ClientRoutes} from './client.routes';
