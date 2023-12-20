@@ -1,5 +1,5 @@
-import defaultImage from '../../src/static/images/cross-circle.svg';
 import {api} from '../services/api';
+import defaultImage from '../../src/static/images/cross-circle.svg';
 
 export function showErrorMessage({ userMessage, devMessage }) {
   alert(userMessage);
